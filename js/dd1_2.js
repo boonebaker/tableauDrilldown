@@ -2,7 +2,7 @@
 var id2 = null;
 
 $(document).ready(function() {
-    tableau.extensions.initializeAsync().then(function() {
+    tableau.extensions.initializeAsync({ 'configure': configure }).then(function() {
         getid2();
         createParameterListener();
     }, function() { console.log('Error while Initializing: ' + err.toString()); });
