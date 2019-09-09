@@ -7,16 +7,19 @@
     <author name="Boone" email="boonebaker@gmail.com" organization="Boone Baker" website="https://github.com/boonebaker/"/>
     <min-api-version>0.9</min-api-version>
     <source-location>
-      <url>https://github.com/boonebaker/tableauExtensions/drilldown.html</url>
+      <url>https://boonebaker.github.io/tableauDrilldown/drilldown.html</url>
     </source-location>
     <icon></icon>
     <permissions>
       <permission>full data</permission>
     </permissions>
+    <context-menu>
+        <configure-context-menu-item/>
+    </context-menu>
   </dashboard-extension>
   <resources>
     <resource id="name">
-      <text locale="en_US">Check-6</text>
+      <text locale="en_US">boonebaker</text>
     </resource>
   </resources>
 </manifest>
