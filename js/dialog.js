@@ -34,10 +34,10 @@
         var useResize = $("#resize").val();
         console.log(useResize);
 
-        var xPos = $("#xPos").val();
-        var yPos = $("#yPos").val();
-        var height = $("#height").val();
-        var width = $("#width").val();
+        $("#xPos").val(xPos);
+        $("#yPos").val(yPos);
+        $("#height").val(height);
+        $("#width").val(width);
 
 
         console.log(xPos);
@@ -57,7 +57,7 @@
 
     function saveButton() {
 
-        console.log($("#xPos").val());
+        console.log($("#xPos"));
         console.log(yPos);
         console.log(height);
         console.log(width);
