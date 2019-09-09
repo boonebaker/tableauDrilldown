@@ -60,4 +60,5 @@ async function hideid2() {
 function consoleBtn() {
     console.log(tableau.extensions.settings.get("cont1"));
     console.log(tableau.extensions.settings.get("param"));
+    console.log(id2);
 }
