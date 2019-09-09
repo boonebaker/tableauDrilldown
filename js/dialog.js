@@ -65,17 +65,17 @@ var width = null;
 
     function saveButton() {
 
-        console.log($("#xPos"));
+        console.log($(xPos));
         console.log(yPos);
         console.log(height);
         console.log(width);
-        tableau.extensions.settings.set("cont1", $("#selectObj").val());
-        tableau.extensions.settings.set("param", $("#selectParam").val());
-        tableau.extensions.settings.set("useResize", $("#resize").val());
-        tableau.extensions.settings.set("xPos", $("#xPos").val());
-        tableau.extensions.settings.set("yPos", $("#yPos").val());
-        tableau.extensions.settings.set("height", $("#height").val());
-        tableau.extensions.settings.set("width", $("#width").val());
+        tableau.extensions.settings.set("cont1", cont1);
+        tableau.extensions.settings.set("param", param);
+        tableau.extensions.settings.set("useResize", useResize);
+        tableau.extensions.settings.set("xPos", xPos);
+        tableau.extensions.settings.set("yPos", yPos);
+        tableau.extensions.settings.set("height", height);
+        tableau.extensions.settings.set("width", width);
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
         });
