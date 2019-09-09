@@ -57,7 +57,7 @@
 
     function saveButton() {
 
-        console.log(xPos);
+        console.log($("#xPos").val());
         console.log(yPos);
         console.log(height);
         console.log(width);
