@@ -11,7 +11,7 @@ $(document).ready(function() {
 function createParameterListener() {
 
     tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function(t) {
-        var p = t.find(p1 => p1.name === "selectedCategory");
+        var p = t.find(p1 => p1.name === tableau.extensions.settings.get("param"));
         const pChanged = tableau.TableauEventType.ParameterChanged;
         p.addEventListener(pChanged, function(parameterEvent) {
             showid2();
@@ -20,9 +20,23 @@ function createParameterListener() {
 
 };
 
+function configure() {
+    const popupUrl = `${window.location.origin}/dialog.html`;
+    let defaultPayload = "";
+    tableau.extensions.ui.displayDialogAsync(popupUrl, defaultPayload, { height: 450, width: 500 }).then((closePayload) => {}).catch((error) => {
+        switch (error.errorCode) {
+            case tableau.ErrorCodes.DialogClosedByUser:
+                console.log("Dialog was closed by user");
+                break;
+            default:
+                console.error(error.message);
+        }
+    });
+}
+
 function getid2() {
     var dash = tableau.extensions.dashboardContent.dashboard;
-    var sObj = dash.objects.find(o => o.name === "id2");
+    var sObj = dash.objects.find(o => o.name === tableau.extensions.settings.get("cont1"));
     id2 = sObj.id;
 };
 
