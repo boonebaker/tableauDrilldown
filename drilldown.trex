@@ -10,9 +10,6 @@
       <url>https://boonebaker.github.io/tableauDrilldown/drilldown.html</url>
     </source-location>
     <icon></icon>
-    <permissions>
-      <permission>full data</permission>
-    </permissions>
     <context-menu>
         <configure-context-menu-item/>
     </context-menu>
