@@ -39,6 +39,7 @@
         var height = $("#height").val();
         var width = $("#width").val();
 
+
         console.log(xPos);
         console.log(yPos);
         console.log(height);
@@ -56,6 +57,10 @@
 
     function saveButton() {
 
+        console.log(xPos);
+        console.log(yPos);
+        console.log(height);
+        console.log(width);
         tableau.extensions.settings.set("cont1", $("#selectObj").val());
         tableau.extensions.settings.set("param", $("#selectParam").val());
         tableau.extensions.settings.set("useResize", $("#resize").val());
