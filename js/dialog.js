@@ -1,5 +1,11 @@
 'use strict';
 
+var useResize = null;
+var xPos = null;
+var yPos = null;
+var height = null;
+var width = null;
+
 (function() {
 
     $(document).ready(function() {
@@ -31,11 +37,6 @@
             }
         });
 
-        var useResize = null;
-        var xPos = null;
-        var yPos = null;
-        var height = null;
-        var width = null;
 
         $("#resize").val(useResize);
         console.log(useResize);
