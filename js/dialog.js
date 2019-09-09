@@ -31,8 +31,15 @@
             }
         });
 
-        var useResize = $("#resize").val();
+        var useResize = null;
+        var xPos = null;
+        var yPos = null;
+        var height = null;
+        var width = null;
+
+        $("#resize").val(useResize);
         console.log(useResize);
+
 
         $("#xPos").val(xPos);
         $("#yPos").val(yPos);
