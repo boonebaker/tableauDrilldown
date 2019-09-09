@@ -10,6 +10,7 @@
 
     function buildDialog() {
         let dashboard = tableau.extensions.dashboardContent.dashboard;
+
         dashboard.objects.forEach(function(obj) {
             if (obj.isFloating) {
                 $("#selectObj").append("<option value='" + obj.name + "'>" + obj.name + "</option>");
