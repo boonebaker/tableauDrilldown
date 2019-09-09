@@ -58,6 +58,11 @@
 
         tableau.extensions.settings.set("cont1", $("#selectObj").val());
         tableau.extensions.settings.set("param", $("#selectParam").val());
+        tableau.extensions.settings.set("useResize", $("#resize").val());
+        tableau.extensions.settings.set("xPos", $("#xPos").val());
+        tableau.extensions.settings.set("yPos", $("#yPos").val());
+        tableau.extensions.settings.set("height", $("#height").val());
+        tableau.extensions.settings.set("width", $("#width").val());
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
         });
