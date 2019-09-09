@@ -42,8 +42,8 @@
 
     function saveButton() {
 
-        tableau.extensions.settings.set("cont1", $("#cont1").val());
-        tableau.extensions.settings.set("param", $("#param").val());
+        tableau.extensions.settings.set("cont1", $("#selectObj").val());
+        tableau.extensions.settings.set("param", $("#selectParam").val());
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
         });
