@@ -31,6 +31,18 @@
             }
         });
 
+        var useResize = $("#resize").val();
+        console.log(useResize);
+
+        var xPos = $("#xPos").val();
+        var yPos = $("#yPos").val();
+        var height = $("#height").val();
+        var width = $("#width").val();
+
+        console.log(xPos);
+        console.log(yPos);
+        console.log(height);
+        console.log(width);
 
         //$("#cont1").val(cont1);
         //$("#param").val(param);
