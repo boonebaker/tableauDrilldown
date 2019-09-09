@@ -14,7 +14,6 @@ function createParameterListener() {
         var p = t.find(p1 => p1.name === tableau.extensions.settings.get("param"));
         const pChanged = tableau.TableauEventType.ParameterChanged;
         p.addEventListener(pChanged, function(parameterEvent) {
-            console.log("showing " + id2);
             showid2();
         });
     });
