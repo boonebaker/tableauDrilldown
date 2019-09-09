@@ -6,36 +6,72 @@
 
 <body>
     <div class="container">
-        <div class="page-header">
-            <small>Drilldown Settings</small>
+        <div class="page-header"><small>Drilldown Settings</small></div>
+        <div class="row">
+            <div class="col-md-6 col-xs-6"><span class="dropdown-label">Select Hide/Show Container:</span><select id="selectObj" class="select">
+                <option disabled="disabled" selected="selected">-- None Selected --</option>
+                </select></div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-xs-6">
-                <span class="dropdown-label">Select Hide/Show Container:</span>
-                <select id="selectObj" class="select">
-                    <option disabled selected="selected">-- None Selected --</option>
-                </select>
-            </div>
+            <div class="col-md-6 col-xs-6"><span class="dropdown-label">Select Triggering Parameter:</span></div>
         </div>
+        <br />
         <div class="row">
-            <div class="col-md-6 col-xs-6">
-                <span class="dropdown-label">Select Triggering Parameter:</span>
-                <select id="selectParam" class="select">
-                    <option disabled selected="selected">-- None Selected --</option>
-                </select>
-            </div>
+            <div class="col-md-6 col-xs-6"><span class="dropdown-label">Select Hide/Show Container:</span></div>
         </div>
-        <br>
+        <div class="row dialog-buttons"><span id="error"></span> <button id="save" class="btn btn-success">Save</button> <button id="cancel" class="btn btn-danger">Cancel</button></div>
+        <div class="row dialog-buttons"></div>
+        <div class="row dialog-buttons"></div>
+        <div class="row dialog-buttons"></div>
+        <div class="row dialog-buttons"></div>
+        <div class="row dialog-buttons"></div>
         <div class="row dialog-buttons">
-            <span id="error"></span>
-            <button id="save" class="btn btn-success">Save</button>
-            <button id="cancel" class="btn btn-danger">Cancel</button>
+            <table style="width: 430px; float: left;">
+                <tbody>
+                    <tr>
+                        <td style="width: 310px;"><strong>Drilldown Settings</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;"></td>
+                        <td style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;"><span class="dropdown-label">Select Hide/Show Container:</span></td>
+                        <td style="width: 200px;"><select id="selectObj" class="select">
+                <option disabled="disabled" selected="selected">-- None Selected --</option>
+                </select></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;"><span class="dropdown-label">Select Triggering Parameter:</span></td>
+                        <td style="width: 200px;"><select id="selectParam" class="select">
+                <option disabled="disabled" selected="selected">-- None Selected --</option>
+                </select></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;">Resize Directing Container?</td>
+                        <td style="width: 200px;"><input type="radio" name="resize" value="Yes" /> Yes<br /> <input type="radio" name="resize" value="no" /> No</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;">Directing Container Position:</td>
+                        <td style="width: 200px;"><input type="number" size="2" name="xPos" /> <br />x<br /> <input type="number" name="yPos" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;">Directing Container Size:</td>
+                        <td style="width: 200px;"><input type="number" size="2" name="width" /> <br />x<br /> <input type="number" name="height" /></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 310px;">
+                            <div class="row dialog-buttons"><span id="error"></span> <button id="save" class="btn btn-success">Save</button> <button id="cancel" class="btn btn-danger">Cancel</button></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tableau/extensions-api/lib/tableau.extensions.1.latest.js"></script>
+    <script type="text/javascript" src="js/dialog.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/tableau/extensions-api/lib/tableau.extensions.1.latest.js"></script>
-<script type="text/javascript" src="js/dialog.js"></script>
 
 </html>
