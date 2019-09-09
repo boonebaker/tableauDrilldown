@@ -21,7 +21,7 @@ function createParameterListener() {
 };
 
 function configure() {
-    const popupUrl = `${window.location.origin}/dialog.html`;
+    const popupUrl = `https://boonebaker.github.io/tableauDrilldown/dialog.html`;
     let defaultPayload = "";
     tableau.extensions.ui.displayDialogAsync(popupUrl, defaultPayload, { height: 450, width: 500 }).then((closePayload) => {}).catch((error) => {
         switch (error.errorCode) {
