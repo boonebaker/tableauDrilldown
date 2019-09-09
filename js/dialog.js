@@ -1,11 +1,5 @@
 'use strict';
 
-var useResize = null;
-var xPos = null;
-var yPos = null;
-var height = null;
-var width = null;
-
 (function() {
 
     $(document).ready(function() {
@@ -38,21 +32,6 @@ var width = null;
         });
 
 
-        $("#resize").val(useResize);
-        console.log(useResize);
-
-
-        $("#xPos").val(xPos);
-        $("#yPos").val(yPos);
-        $("#height").val(height);
-        $("#width").val(width);
-
-
-        console.log(xPos);
-        console.log(yPos);
-        console.log(height);
-        console.log(width);
-
         //$("#cont1").val(cont1);
         //$("#param").val(param);
         $('#cancel').click(closeDialog);
@@ -65,17 +44,8 @@ var width = null;
 
     function saveButton() {
 
-        console.log($(xPos));
-        console.log(yPos);
-        console.log(height);
-        console.log(width);
-        tableau.extensions.settings.set("cont1", cont1);
-        tableau.extensions.settings.set("param", param);
-        tableau.extensions.settings.set("useResize", useResize);
-        tableau.extensions.settings.set("xPos", xPos);
-        tableau.extensions.settings.set("yPos", yPos);
-        tableau.extensions.settings.set("height", height);
-        tableau.extensions.settings.set("width", width);
+        tableau.extensions.settings.set("cont1", $("#selectObj").val());
+        tableau.extensions.settings.set("param", $("#selectParam").val());
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
         });
