@@ -20,7 +20,7 @@
             $("#selectObj").val(cont1);
         }
 
-        var parameters = dashboard.getParamatersAsync().then(function(p) {
+        var parameters = dashboard.getParametersAsync().then(function(p) {
             p.forEach(function(p1) {
                 $("#selectParam").append("<option value='" + p1.name + "'>" + p1.name + "</option>");
             });
