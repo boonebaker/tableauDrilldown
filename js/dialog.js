@@ -25,11 +25,12 @@
             p.forEach(function(p1) {
                 $("#selectParam").append("<option value='" + p1.name + "'>" + p1.name + "</option>");
             });
+            var param = tableau.extensions.settings.get("param");
+            if (param != undefined) {
+                $("#selectParam").val(param);
+            }
         });
-        var param = tableau.extensions.settings.get("param");
-        if (param != undefined) {
-            $("#selectParam").val(param);
-        }
+
 
         //$("#cont1").val(cont1);
         //$("#param").val(param);
