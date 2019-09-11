@@ -53,6 +53,6 @@ async function hideid2() {
     var zoneVisibilityMap = {};
     zoneVisibilityMap[id2] = tableau.ZoneVisibilityType.Hide;
     await tableau.extensions.dashboardContent.dashboard.setZoneVisibilityAsync(zoneVisibilityMap).then(() => {
-        console.log(p.dataType);
+        p.changeValueAsync(tableau.extensions.settings.get("defValue"));
     });
 };
