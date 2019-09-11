@@ -1,5 +1,6 @@
 'use strict';
 var id2 = null;
+var p = null;
 
 $(document).ready(function() {
     tableau.extensions.initializeAsync({ 'configure': configure }).then(function() {
@@ -11,7 +12,7 @@ $(document).ready(function() {
 function createParameterListener() {
 
     tableau.extensions.dashboardContent.dashboard.getParametersAsync().then(function(t) {
-        var p = t.find(p1 => p1.name === tableau.extensions.settings.get("param"));
+        p = t.find(p1 => p1.name === tableau.extensions.settings.get("param"));
         const pChanged = tableau.TableauEventType.ParameterChanged;
         p.addEventListener(pChanged, function(parameterEvent) {
             showid2();
@@ -52,6 +53,6 @@ async function hideid2() {
     var zoneVisibilityMap = {};
     zoneVisibilityMap[id2] = tableau.ZoneVisibilityType.Hide;
     await tableau.extensions.dashboardContent.dashboard.setZoneVisibilityAsync(zoneVisibilityMap).then(() => {
-
+        console.log(p.dataType);
     });
 };
