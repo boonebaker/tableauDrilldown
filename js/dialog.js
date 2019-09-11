@@ -31,11 +31,6 @@
             }
         });
 
-        var defValue = tableau.extensions.settings.get("defValue");
-        if (defValue != undefined) {
-            $("#defValue").val(defValue);
-        }
-
         //$("#cont1").val(cont1);
         //$("#param").val(param);
         $('#cancel').click(closeDialog);
@@ -50,7 +45,6 @@
 
         tableau.extensions.settings.set("cont1", $("#selectObj").val());
         tableau.extensions.settings.set("param", $("#selectParam").val());
-        tableau.extensions.settings.set("defValue", $("#defValue").val());
         tableau.extensions.settings.saveAsync().then((currentSettings) => {
             tableau.extensions.ui.closeDialog("10");
         });
